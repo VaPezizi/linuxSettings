@@ -5,6 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. /usr/share/powerline/bindings/bash/powerline.sh
+
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='\e[31m\u@\e[36m\h \e[34m/\W\e[0m \$ '
+
+# Created by `pipx` on 2024-05-07 11:35:36
+export PATH="$PATH:/home/samuli/.local/bin"
