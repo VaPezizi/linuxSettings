@@ -50,6 +50,16 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_powerline_fonts=1
 
+"let g:ale_c_clangtidy_executable = 'clang-tidy -checks=* --extra-arg=-I --extra-arg=/usr/include'
+
+"C Programming options
+
+let g:ale_linters = {'c': ['clangtidy', 'clangcheck']}
+let g:ale_c_cc_options = '-std=c11 -Wall -L/usr/include' 
+let g:ale_c_clangtidy_options = '-I /usr/include'
+let g:ale_c_clangcheck_options = '-- -I /usr/include'
+
+
 set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
