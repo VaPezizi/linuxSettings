@@ -81,7 +81,10 @@ endif
 
 "Testi Powerline end
 
-
+"Buffers
+map gn :bnext<cr>
+map gp :bprevious<cr>
+map gd :bdelete<cr>
 
 
 set foldmethod=indent
