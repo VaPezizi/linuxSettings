@@ -6,6 +6,7 @@ call vundle#begin()
 
 set laststatus=2
 
+packadd! termdebug
 let python_highlight_all=1
 syntax on
 
@@ -13,6 +14,7 @@ syntax on
 
 "Plugin 'VundleVim/Vundle.vim'
 "Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'puremourning/vimspector'
 Plugin 'jnurmine/Zenburn'
 Plugin 'bling/vim-airline'
 Plugin 'w0rp/ale'
@@ -54,14 +56,16 @@ let g:airline_powerline_fonts=1
 
 "C Programming options
 
-let g:ale_linters = {'c': ['clangtidy', 'clangcheck']}
+let g:ale_c_cc_option = '-Wno-aligned-new'
+let g:termdebug_wide=1
+"let g:ale_linters = {'c': ['clangtidy', 'clangcheck']}
 
-"let g:ale_linters = {'c': ['cc']}
-let g:ale_c_cc_options = '-- -std=gnu11 -Wall -L/usr/include `pkg-config --cflags gtk+-3.0`' 
-let g:ale_c_clangtidy_options = '-I /usr/include `pkg-config --cflags gtk+-3.0`'
+let g:ale_linters = {'c': ['cc']}
+"let g:ale_c_cc_options = '-- -std=gnu11 -Wall -L/usr/include `pkg-config --cflags gtk+-3.0`' 
+"let g:ale_c_clangtidy_options = '-I /usr/include `pkg-config --cflags gtk+-3.0`'
 "let g:ale_c_clangcheck_options = '-- -I /usr/include'
 
-let g:ale_c_clangcheck_options = '-- -I /usr/include `pkg-config --cflags gtk+-3.0`'
+"let g:ale_c_clangcheck_options = '-- -I /usr/include `pkg-config --cflags gtk+-3.0`'
 
 set guifont=Inconsolata\ for\ Powerline:h15
 let g:Powerline_symbols = 'fancy'
@@ -96,7 +100,7 @@ nnoremap <space> za
 
 set clipboard=unnamed
 
-autocmd vimenter * NERDTree | wincmd p
+"autocmd vimenter * NERDTree | wincmd p
 
 set nu
 
