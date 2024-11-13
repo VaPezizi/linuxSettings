@@ -33,6 +33,12 @@ Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
+set title
+
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
 
 let NERDTreeIgnore=['\.pyc$', '\~$']
 "au BufRead,BufNewFile * .py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
